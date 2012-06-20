@@ -1,0 +1,22 @@
+*.class
+*.log
+
+# sbt specific
+dist/*
+target/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+
+# Scala-IDE specific
+.scala_dependencies
+
+# cuz jni assemble not working
+# src/main/libs/
+src/main/obj/
+
+.idea
+.idea_modules
+.DS_Store
+
