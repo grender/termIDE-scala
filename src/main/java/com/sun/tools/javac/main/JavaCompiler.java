@@ -490,7 +490,8 @@ public class JavaCompiler implements ClassReader.SourceCompleter {
     /** Partial map to record which compiler phases have been executed
      * for each compilation unit. Used for ATTR and FLOW phases.
      */
-    protected class CompileStates extends HashMap<Env<AttrContext>,CompileState> {
+    // RUN_FIX: this must be "protected"
+    public class CompileStates extends HashMap<Env<AttrContext>,CompileState> {
         boolean isDone(Env<AttrContext> env, CompileState cs) {
             CompileState ecs = get(env);
             return ecs != null && ecs.isDone(cs);

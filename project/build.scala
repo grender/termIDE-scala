@@ -33,7 +33,7 @@ object AndroidBuild extends Build {
     //TODO: understand why not working
     settings = General.fullAndroidSettings ++ AndroidNdk.settings
     ++ Seq( 
-	useProguard in Android := true,
+	useProguard in Android := false,
 	proguardOption in Android := "-keepclasseswithmembers class * { native <methods>; }"
     )
   )
